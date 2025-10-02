@@ -3,12 +3,10 @@
 # 📧🛡️ SpoofShieldAI  🚀
 *AI-powered Email Spoofing & Phishing Detection System*  
 
-![Python Version](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)  
-![Build Status](https://img.shields.io/github/workflow/status/your-username/SpoofShieldAI/Python%20Application?style=for-the-badge)  
-![Release](https://img.shields.io/github/v/release/your-username/SpoofShieldAI?style=for-the-badge)  
-![Stars](https://img.shields.io/github/stars/your-username/SpoofShieldAI?style=for-the-badge&logo=github)  
-![Forks](https://img.shields.io/github/forks/your-username/SpoofShieldAI?style=for-the-badge&logo=github)  
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![SpoofShieldAI Banner](https://img.shields.io/badge/Email%20Security-AI%20Powered-blue?style=for-the-badge&logo=gmail)  
+![Python](https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge&logo=python)  
+![TensorFlow](https://img.shields.io/badge/TensorFlow-ML-orange?style=for-the-badge&logo=tensorflow)  
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)  
 
 ---
 
