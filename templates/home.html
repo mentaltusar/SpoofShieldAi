@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Next-Gen Threat Intelligence{% endblock %}
+{% block content %}
+
+<section class="hero-section animate-on-scroll" style="height: 100vh; position: relative; display: flex; align-items: flex-end; padding: 0 50px 80px;) center/cover no-repeat;">
+    <video autoplay muted loop playsinline class="video-background">
+        <source src="{{ url_for('static', filename='video/hero.mp4') }}" type="video/mp4">
+    </video>
+
+
+
+    <div class="hero-content" style="max-width: 800px; z-index: 1;">
+
+        <h1 class="hero-title" style="font-size: 4em; line-height: 1; margin-bottom: 20px;">SPOOFSHIELD AI </h1>
+        <p class="hero-subtitle" style="font-size: 1.5em; font-weight: 300;">Zero-Day Protection for Your Email Infrastructure.</p>
+        <a href="{{ url_for('analyze') }}" class="btn-hero pulse-effect">Start Analysis</a>
+    </div>
+    <div style="position: absolute; bottom: 30px; right: 50px; color: var(--color-accent); font-size: 0.9em;">SYSTEM ONLINE &gt;&gt;</div>
+</section>
+
+<section style="background-color: var(--color-surface); padding: 100px 30px;">
+    <h2 class="animate-on-scroll" style="text-align: center; margin-bottom: 60px; font-size: 2.5em;">INTELLIGENCE PIPELINE</h2>
+
+    <div class="feature-pipeline-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="feature-card animate-on-scroll">
+            <h3 style="color: var(--color-accent); font-size: 3em; margin-bottom: 10px;">01.</h3>
+            <h4 style="font-size: 1.4em; margin-bottom: 15px;">DOMAIN AUTHENTICATION</h4>
+            <p style="color: #AAA;">Verifies DMARC, SPF, and DKIM to prevent exact-match domain spoofing and email forgery. Trust is paramount.</p>
+        </div>
+
+        <div class="feature-card animate-on-scroll">
+            <h3 style="color: var(--color-accent); font-size: 3em; margin-bottom: 10px;">02.</h3>
+            <h4 style="font-size: 1.4em; margin-bottom: 15px;">LINGUISTIC AI</h4>
+            <p style="color: #AAA;">Our proprietary model detects malicious intent and social engineering language, flagging urgency and financial lures.</p>
+        </div>
+
+        <div class="feature-card animate-on-scroll">
+            <h3 style="color: var(--color-accent); font-size: 3em; margin-bottom: 10px;">03.</h3>
+            <h4 style="font-size: 1.4em; margin-bottom: 15px;">THREAT FUSION</h4>
+            <p style="color: #AAA;">Aggregated data points are scored by our Random Forest model for a precise, reliable, and actionable threat verdict.</p>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 100px 30px; background-color: var(--color-bg);">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+
+        <div class="animate-on-scroll">
+            <h2 style="font-size: 2em; margin-bottom: 20px;">PRECISION DATA MAPPING</h2>
+            <img src="{{ url_for('static', filename='img/data_flow.png') }}" alt="Data flow diagram" style="width: 100%; border: 1px solid #333; box-shadow: 0 0 20px rgba(30, 144, 255, 0.1);">
+
+
+        </div>
+
+        <div class="animate-on-scroll">
+            <h2 style="font-size: 2em; margin-bottom: 20px;">LIVE DEMONSTRATION</h2>
+            <div class="responsive-video-container" style="margin-bottom: 20px;">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?controls=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p style="color: #AAA;">Watch a quick breakdown of how our AI pipeline processes and neutralizes complex spoofing attempts in real-time.</p>
+            <a href="{{ url_for('contact') }}" class="btn" style="background-color: var(--color-text); color: var(--color-bg); font-weight: 700; border: 1px solid var(--color-accent);">REQUEST A PERSONALIZED DEMO</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

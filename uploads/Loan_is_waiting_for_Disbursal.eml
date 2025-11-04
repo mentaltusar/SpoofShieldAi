@@ -1,0 +1,139 @@
+Delivered-To: tusarkant2005@gmail.com
+Received: by 2002:a05:6638:4e82:b0:50d:558a:204 with SMTP id hd2csp522330jab;
+        Sun, 14 Sep 2025 02:01:07 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHDQyFYWmxF4G0nx/xZc+5D1/gMyO1wQt6dJL1kZjIXsjfnaX66nati7N+Eq9MDyV/s8Pju
+X-Received: by 2002:ac8:5913:0:b0:4b7:5de3:3046 with SMTP id d75a77b69052e-4b77d071322mr114880711cf.49.1757840467171;
+        Sun, 14 Sep 2025 02:01:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1757840467; cv=none;
+        d=google.com; s=arc-20240605;
+        b=KOsmt2QJoTSE3fKCBplGS5UhD82dDrsrAUgM99NMbFp6/jHswFGMKw+FbXDRzuqymq
+         CavkM8pjgXWRC71MlH0PbWgPzJQy5oCHCXLs7Dp9Ed9umduSAEiN5rd7LduwneDq9WLd
+         FURjlgPNRDAYV6p7pfHRh3tiYSqPp6SOMSz3+8eTF62i7ZmIEjPt6kyNNZ+VOLLa+oA6
+         mvSf0w5cYy1QQh6kCgLKTIu6cqtvNmhCJKep8aCNRTOyNuMiFuK4fcUvp+aY+JOPpfyJ
+         WyeBFrsH4nZ9WsiZmxKXFgtKZyJKv8pIKdvR9Zh4TtUl/EmoJfZKiL0VM6Gq+jxShYzk
+         0fqw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=date:mime-version:feedback-id:list-unsubscribe
+         :list-unsubscribe-post:message-id:subject:reply-to:from:to
+         :domainkey-signature:dkim-signature:dkim-signature;
+        bh=3/b0X1vHZF2rmYL4X+vKPZYkm1QV3SfVY056cSlw0G8=;
+        fh=a2n8/uFnkV/5uvjQmGZVH7HlusXGVyFb0z9R5S0wI4k=;
+        b=a4eMyhaGvQbMiXM/40QTH+EH27Ziu/TxDuAIqMOxwN0GnUKMftOqMZP1d8euGsffIc
+         Nb0bmRYrgZFugClWuGuw2GLmH1qbN+jYkf9Gjv03X/fqjpNN/k4HCTJacK959VfrVJkl
+         rPi6imL+n7cKX2/qcY+ic49Y4X7LDoHbb0kVB+WgSk5h2JMDcId5eDT3NquOiwQFNT0M
+         6IS0S4eMz1RqB4lbINf+9Z10n+zW3MOVpKS6rBVAYQfh56gyT1q9ErELL9g49CZ1dnwJ
+         vPIDTITR9nH195I3YtRMRgQB4y6nPxdKkoO4ef5wQwh1pSmj2lD622v2VRjKCWisVfSk
+         Bebg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@bdlengage.buddyloan.com header.s=emm header.b=KwZmGd38;
+       dkim=pass header.i=@mail.bdlengage.buddyloan.com header.s=emm header.b=LdEKtgED;
+       spf=pass (google.com: domain of campaign-bdlengage-156501-7866005-8844214-i-e=gmail.com@mail.bdlengage.buddyloan.com designates 103.52.183.95 as permitted sender) smtp.mailfrom="campaign-bdlengage-156501-7866005-8844214-i-e=gmail.com@mail.bdlengage.buddyloan.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=buddyloan.com
+Return-Path: <campaign-bdlengage-156501-7866005-8844214-i-e=gmail.com@mail.bdlengage.buddyloan.com>
+Received: from newmta7-183.95.ncdelivery04.com (newmta7-183.95.ncdelivery04.com. [103.52.183.95])
+        by mx.google.com with ESMTPS id d75a77b69052e-4b639e15da5si40661111cf.808.2025.09.14.02.01.06
+        for <tusarkant2005@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 14 Sep 2025 02:01:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of campaign-bdlengage-156501-7866005-8844214-i-e=gmail.com@mail.bdlengage.buddyloan.com designates 103.52.183.95 as permitted sender) client-ip=103.52.183.95;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bdlengage.buddyloan.com header.s=emm header.b=KwZmGd38;
+       dkim=pass header.i=@mail.bdlengage.buddyloan.com header.s=emm header.b=LdEKtgED;
+       spf=pass (google.com: domain of campaign-bdlengage-156501-7866005-8844214-i-e=gmail.com@mail.bdlengage.buddyloan.com designates 103.52.183.95 as permitted sender) smtp.mailfrom="campaign-bdlengage-156501-7866005-8844214-i-e=gmail.com@mail.bdlengage.buddyloan.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=buddyloan.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=emm; d=bdlengage.buddyloan.com;
+ h=To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:Feedback-ID:MIME-Version:Content-Type:Date:from:to:subject;
+ bh=3/b0X1vHZF2rmYL4X+vKPZYkm1QV3SfVY056cSlw0G8=;
+ b=KwZmGd38fMyOQWxWVbo7l30W2ZkDeO8c+K8XiQqI/dE6ik6c+wkWPaF2dG2+QxZCucWEvP2XQDcZ
+   mn8i7L3q0wlWgJrCcpp50ngZMgGLljwOX2Bu0y3NO/Mla5QuWcuSXzfQHG/vCwbXoo7voj8FhTVu
+   ML4z4USMNbHVtrCL+CE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=emm; d=mail.bdlengage.buddyloan.com;
+ h=To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:Feedback-ID:MIME-Version:Content-Type:Date:from:to:subject;
+ bh=3/b0X1vHZF2rmYL4X+vKPZYkm1QV3SfVY056cSlw0G8=;
+ b=LdEKtgEDHIg+Me5mIcXaO1rHoQ6kTQ+XpDOlF5MYbFV83JJdZpDcpWpgkqTs4eawZclrrc1wefxX
+   2r+ly9nTa7Fji/uDCS8j0otySo2V8DBaRmWk8nTtEJDFtXpdC9zqCd0ntgmR3eP0UYFxrV/2rrJJ
+   4Rgvxj7duGWSXe5W7xI=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=emm; d=bdlengage.buddyloan.com;
+ b=I1C2d+6Ko/8IhvkCXF6IluDfn9sGZ9LHurdMC01ukkkfU9MjLldAUnS5aS5d3kDjjuzoFtWcMLek
+   bORrw4KM4a/KlJAgwo3RJ1J0A+CnUEUYg9Ze5vEzMgxRQ6UQC+swes+OGI9mJmL6MH+fqDsBSAmi
+   P6TyBgoH7AMyjTsAuh0=;
+To: tusarkant2005@gmail.com
+From: =?UTF-8?B?UG9vbmF3YWxsYSBDYXNo?= <notifications@bdlengage.buddyloan.com>
+Reply-To: =?UTF-8?B?UG9vbmF3YWxsYSBDYXNo?= <notifications@bdlengage.buddyloan.com>
+Subject: Loan is waiting for Disbursal
+Message-ID: <32108560948844214@mail.bdlengage.buddyloan.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://unsub-pubs.zeemail.in/vtrack?ul=WgwCUVQHAB8EHxJGRAMTCgINEQoJUld2UAsFX1kcVVgIGEVOUw==&ml=VQwAU1YGAR8FHxo=&sl=IEh5JjNKYTBJMCtnSxIADwYPBBZbBg5TWQEFUVAcVEIBAEBeDVkKHVRbCE5V&clientid=156501&c=000>, <mailto:uns-bdlengage-156501-7866005-8844214-i-be7e6345d8d4378970bb9796566e6549@mail.bdlengage.buddyloan.com?subject=Unsubscribe>
+X-Mailer: NcPubs Mailer
+X-Mta-Source: bdlengage_156501
+X-Mta-Priority: 2
+Feedback-ID: 7866:156501:20250914141900:nczc
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_10e276e432b5d03e0083f7eacbb048af"
+Date: Sun, 14 Sep 2025 14:31:07 +0530
+
+
+
+
+--b1_10e276e432b5d03e0083f7eacbb048af
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+New Page
+
+
+
+  
+    
+      
+
+    
+  
+  Thank you for visiting Us! Got questions? Want to connect with us? We are here to help. Click on the Button Now. We look forward to hearing from you.
+  
+-- You received this email to let you know about important updates for your applied application
+--Click Here to unsubscribe from this newsletter.
+
+
+--b1_10e276e432b5d03e0083f7eacbb048af
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Page</title>
+</head>
+<body style="background-color: #ffffff; color: #000000; margin:0; padding:0;"><div style="display: none; white-space: nowrap; font-size: 1px; line-height: 1px; color: #ffffff; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">
+Rs. 5,00,000 is Pre-Approved for you. 
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+</div>
+<img border="0" src="http://panela.bdlengage.buddyloan.com/vtrack?clientid=156501&ul=
+WgwCUVQHAB8EHxJGRAMTCgINEQoJUld2UAsFX1kcVVgIGEVOUw==&ml=VQwAU1YGAR8FH1ZP&sl=IEh5GTNlSDB4NxpDVgwEDQJNB1xVBwxRVgEBGFdHUlMcCFZTDBYHXFpIVQ==&c=0000" >
+<div style="text-align: center;">
+<a href="http://panela.bdlengage.buddyloan.com/vtrack?clientid=156501&ul=
+WgwCUVQHAB8EHxJGRAMTCgINEQoJUld2UAsFX1kcVVgIGEVOUw==&ml=VQwAU1YGAR8FH1QBDlJXHQ==&sl=IEh1GTNlSDB4NxpDVgwEDQJNB1xVBwxRVgEBGFdHUlMcCFZTDBYHXFpIVQ==&pp=0&fl=CkBCFRUMG0xcDRVHVgwVTBMMBlNcFk9aWAcKGEVdWVkEE1heDlkCWllXCkAVGlQKCRY=&ext=dXRtX0RTQV9Db2RlPVBLQTAwMTkyJlVUTV9QYXJ0bmVyX05hbWU9QnVkZHlMb2FuJlVUTV9QYXJ0bmVyX01lZGl1bT1FbWFpbF9CRExfNDE5N19TZXAxNCZVVE1fUGFydG5lcl9BZ2VudENvZGU9UEZMQkwmVVRNX1BhcnRuZXJfUmVmZXJlbmNlSUQ9QnVkbG9hblBGTDAwMDAwMDAx" >
+<img src="https://buddyloan-club.s3.ap-south-1.amazonaws.com/1747909781.png" width="500" style="max-width:100%; height:auto;" alt="1731674995">
+</a>
+</div>
+<p style="color: white;">Thank you for visiting Us! Got questions? Want to connect with us? We are here to help. Click on the Button Now. We look forward to hearing from you.</p>
+<p style="color: white;">
+-- You received this email to let you know about important updates for your applied application</p>
+<br/><div><p style='font-size: 12px;line-height: normal;font-family: arial;text-align: center;' >--<br><a href="http://panela.bdlengage.buddyloan.com/vtrack?clientid=156501&ul=
+WgwCUVQHAB8EHxJGRAMTCgINEQoJUld2UAsFX1kcVVgIGEVOUw==&ml=VQwAU1YGAR8FH1QBDlBQHQ==&sl=IEhjGTNlSDB4NxpDVgwEDQJNB1xVBwxRVgEBGFdHUlMcCFZTDBYHXFpIVQ==&pp=0&fl=CkBCFVwZGxNUDQNfVkwDBQ8GC19YBQcYVAkJGVdWWlILA1hVBxc=&ext=cD1zbXVuc3ViJm1pZD03ODY2JnVpZD1bVU5JUUlEXSZ3dmlkPTAwNQ=="  >Click Here</a> to unsubscribe from this newsletter.<br><br></div></body>
+</html>
+
+
+
+--b1_10e276e432b5d03e0083f7eacbb048af--
+

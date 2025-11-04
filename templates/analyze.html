@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Analyze File{% endblock %}
+{% block content %}
+
+<section style="padding: 100px 30px; text-align: center; background-color: var(--color-surface);">
+    <h1 style="font-size: 3em;" class="animate-on-load">SECURE UPLOAD PORTAL</h1>
+    <p style="font-size: 1.2em; color: #AAA;" class="animate-on-load">Please upload your `.eml` or `.mbox` file below to initiate the AI scan.</p>
+</section>
+
+<div class="center-container">
+    <div class="analyze-form hover-effect-lift">
+        <h2 style="font-size: 1.8em; text-align: center; margin-bottom: 30px;">Threat Scan Initiation</h2>
+        <form method="POST" action="{{ url_for('analyze') }}" enctype="multipart/form-data">
+
+            <div style="border: 2px dashed rgba(255, 255, 255, 0.2); padding: 30px; text-align: center; margin-bottom: 30px;" class="animate-on-load">
+                <p style="color: var(--color-accent); font-size: 1.1em;">FILE INPUT (Max 20MB)</p>
+                <input type="file" id="eml_file" name="eml_file" accept=".eml,.mbox" required style="border: none; background: transparent;">
+            </div>
+
+            <button type="submit" class="btn">RUN SPOOFSHIELD AI SCAN</button>
+        </form>
+    </div>
+</div>
+
+<section style="padding: 80px 30px; background-color: var(--color-bg); border-top: 1px solid #333;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+        <div class="animate-on-load">
+            <h3 style="font-size: 2em; margin-bottom: 20px;">OUR COMMITMENT TO PRIVACY</h3>
+            <p style="color: #AAA; margin-bottom: 20px;">Uploaded files are immediately analyzed for threat vectors and are deleted from our temporary server storage within 24 hours. We do not store email content or credentials.</p>
+            <a href="{{ url_for('contact') }}" style="color: var(--color-accent); text-decoration: none;">View Full Privacy Policy &gt;</a>
+        </div>
+        <div class="animate-on-load">
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

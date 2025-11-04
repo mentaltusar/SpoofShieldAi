@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Analysis Report{% endblock %}
+{% block content %}
+
+<div class="report-wrapper animate-on-scroll">
+    <div class="report-header">
+        <h1>AI THREAT ANALYSIS REPORT</h1>
+        <p style="font-size: 1.1em; color: #AAA;">Scan completed </p>
+    </div>
+
+    <div class="report-grid">
+
+        <div class="verdict-panel">
+            <h2 style="font-size: 1.5em; color: #BBB; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">FINAL VERDICT</h2>
+
+            <div class="verdict-box" style="background-color: {% if result.result == 'Phishing Detected!' %}var(--color-danger){% else %}var(--color-safe){% endif %};">
+                <p style="font-size: 1.2em; font-weight: 700; color: var(--color-bg); margin-bottom: 10px;">STATUS:</p>
+                <h3 style="font-size: 3em; font-weight: 900; color: var(--color-bg); text-transform: none;">
+                    {{ result.result }}
+                </h3>
+            </div>
+
+            <div class="key-indicators">
+                <h4 style="font-size: 1.2em; margin-top: 30px; margin-bottom: 15px; color: var(--color-text);">THREAT CAUSES:</h4>
+                <ul class="causes-list">
+                    {% for cause in result.causes %}
+                        <li style="color: {% if 'No strong' in cause %}var(--color-safe){% else %}var(--color-warning){% endif %};">
+                            &bull; {{ cause }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <a href="{{ url_for('analyze') }}" class="btn" style="width: 100%; margin-top: 40px; background-color: var(--color-accent);">RUN NEW ANALYSIS &gt;</a>
+        </div>
+
+        <div class="technical-details-panel">
+            <h2 style="font-size: 1.5em; color: #BBB; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">TECHNICAL HEADERS</h2>
+
+            <table class="data-table">
+                <tr><td class="label">SENDER DOMAIN:</td><td>{{ result.sender_raw }}</td></tr>
+                <tr><td class="label">DECODED DOMAIN:</td><td>{{ result.decoded_domain }}</td></tr>
+                <tr><td class="label">RETURN PATH:</td><td>{{ result.return_raw }}</td></tr>
+                <tr><td class="label">PUNYCODE/IDN:</td><td>{{ result.idn_used | upper }}</td></tr>
+                <tr><td class="label">SUSPICIOUS KEYWORDS:</td><td>{{ result.suspicious_count }}</td></tr>
+            </table>
+
+            <h4 style="font-size: 1.2em; margin-top: 30px; margin-bottom: 15px; color: var(--color-text);">EMAIL AUTHENTICATION STATUS</h4>
+            <div class="auth-status-grid">
+                <div class="auth-item">
+                    <span class="auth-label">SPF:</span>
+                    <span class="auth-status {% if result.spf == 'fail' %}danger{% else %}safe{% endif %}">{{ result.spf | upper }}</span>
+                </div>
+                <div class="auth-item">
+                    <span class="auth-label">DKIM:</span>
+                    <span class="auth-status {% if result.dkim == 'fail' %}danger{% else %}safe{% endif %}">{{ result.dkim | upper }}</span>
+                </div>
+                <div class="auth-item">
+                    <span class="auth-label">DMARC:</span>
+                    <span class="auth-status {% if result.dmarc == 'fail' %}danger{% else %}safe{% endif %}">{{ result.dmarc | upper }}</span>
+                </div>
+            </div>
+
+            <h4 style="font-size: 1.2em; margin-top: 30px; margin-bottom: 15px; color: var(--color-text);">MESSAGE EXCERPT</h4>
+            <pre class="excerpt-box">{{ result.body_excerpt }}</pre>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

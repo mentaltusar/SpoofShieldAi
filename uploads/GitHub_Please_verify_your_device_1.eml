@@ -1,0 +1,77 @@
+Delivered-To: tusarkant2005@gmail.com
+Received: by 2002:a02:c8d3:0:b0:5b7:1818:6ed1 with SMTP id q19csp550422jao;
+        Mon, 3 Nov 2025 05:54:30 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFIZW5AgRgs1RJdv8E4h9SfksYvUGVSKLy8mICdoWeS3u2hoy5JTU24GPqpiRoPWl/sbIoT
+X-Received: by 2002:a05:620a:1a22:b0:89f:6d9e:9461 with SMTP id af79cd13be357-8ab98fb6bdfmr1742582485a.17.1762178069775;
+        Mon, 03 Nov 2025 05:54:29 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1762178069; cv=none;
+        d=google.com; s=arc-20240605;
+        b=aIh7eNHU1HSpzGElObP3KCHWbo5AtcELHOlZjDL+ihiVWCBrHyQ995xDE0xpleaCSk
+         5eMEhKhpglIipphCjOVqIEJQ1JFCbxlKIzJuPcjGXQfGqmT9+Ey1c1lnV2cUrShmGYGz
+         NW0+/b1GEJcACNkoWqi2tKo0u3xgWKUT+Kh7m6HjmVwjegeCutFEBRXmUx1KwKXGLFY3
+         aGjw19JlHCNSXz48fLft4H3idDxV1ETdisoJj44AlmZsxqGa7fSlFsSFsQ1PQwyVSzla
+         264rOjtZfVEsnT8vnmn4B8yw4de/U7RkIQ7rKycDanair4KLTbjUnIaO+q+Ek1jMBbw/
+         r5FQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=2c/Pe8xvQLLA6wIoV14sBMRxcPSnfAYFK6N7JMHdh7k=;
+        fh=6Y4aZ1pLVx1P++3GaEBxOp/PUFfrJqf3i+Q+PrzJNnE=;
+        b=DTA2Mqj1lPLDaMLpLzYCIHbQ2sqVZM8SPAhx3ovuvFnhMMQCoOmOU3llolxx1IAfFC
+         wb3EsGMJghrjT9e3Todw1HD9dIUxFMtDqaluBMZMCdRwVqFU5Tge+T6ZlKGbcUn9anXw
+         3GJBFgbJnsSRW2jOwV1/ujPh5p+C0geb6inOL6559kWjYuqwM/Ci7otbF4impkcTeQEk
+         rmzYnf+myWf2iqpXOivGbRA7l9+m6RaIj7i8V8AYZf0qiFAdAS3uJ/cSEB0lEOprNsA9
+         guGrc+/sW/wRY9E970RF0wxIX+FnPsjiwnE4mjHihXyB8CtkC4iiXwdyFxXtP4QcR1Lr
+         RafA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=dbnLU1lX;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.202 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-19.smtp.github.com (out-19.smtp.github.com. [192.30.252.202])
+        by mx.google.com with ESMTPS id d75a77b69052e-4ed34fc84c9si30804851cf.54.2025.11.03.05.54.29
+        for <tusarkant2005@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 03 Nov 2025 05:54:29 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.202 as permitted sender) client-ip=192.30.252.202;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=dbnLU1lX;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.202 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Received: from github.com (hubbernetes-node-fef54fc.va3-iad.github.net [10.48.181.35])
+	by smtp.github.com (Postfix) with ESMTPA id 70F03E0606
+	for <tusarkant2005@gmail.com>; Mon,  3 Nov 2025 05:54:29 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1762178069;
+	bh=2c/Pe8xvQLLA6wIoV14sBMRxcPSnfAYFK6N7JMHdh7k=;
+	h=Date:From:To:Subject:From;
+	b=dbnLU1lXmgl/MieXb2zxMZx/XaSdqlLu8GrKjs+LVfQSJtv5ioeRPegTlA0OnaLCP
+	 1WhFGacvrNrlYIGUqTQ/JqDvZKzWJ8efA+RKfTprvKXWKK88wWFu7aHcth0vykjDx+
+	 8SQttNHdQDQbotT5qVbC9l8+Hr/qSR+SfJGXo1Vc=
+Date: Mon, 03 Nov 2025 05:54:29 -0800
+From: GitHub <noreply@github.com>
+To: Tusar <tusarkant2005@gmail.com>
+Message-ID: <6908b4156cf5b_c811005541a@accountsecurityworker-7cf4cf5fb6-wm62h.mail>
+Subject: [GitHub] Please verify your device
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+
+Hey mentaltusar!
+
+A sign in attempt requires further verification because we did not recognize your device. To complete the sign in, enter the verification code on the unrecognized device.
+
+Device: Chrome on Android
+Verification code: 598325
+
+If you did not attempt to sign in to your account, your password may be compromised. Visit https://github.com/settings/security to create a new, strong password for your GitHub account.
+
+If you'd like to automatically verify devices in the future, consider enabling two-factor authentication on your account. Visit https://docs.github.com/articles/configuring-two-factor-authentication to learn about two-factor authentication.
+
+If you decide to enable two-factor authentication, ensure you retain access to one or more account recovery methods. See https://docs.github.com/articles/configuring-two-factor-authentication-recovery-methods in the GitHub Help.
+
+Thanks,
+The GitHub Team

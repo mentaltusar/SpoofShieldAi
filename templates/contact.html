@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Contact & Support{% endblock %}
+{% block content %}
+
+<section style="padding: 100px 30px; text-align: center; background-color: var(--color-surface);" class="animate-on-load">
+    <h1 style="font-size: 3em;">GET IN TOUCH WITH INTELLIGENCE</h1>
+    <p style="font-size: 1.2em; color: #AAA;">Our support team and threat analysts are available 24/7.</p>
+</section>
+
+<div style="max-width: 1200px; margin: 50px auto; padding: 0 30px; display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px;">
+
+    <div class="animate-on-load">
+        <div class="auth-form" style="max-width: none; padding: 40px;" class="hover-effect-lift">
+            <h2 style="font-size: 1.8em; margin-bottom: 30px;">Send a Secure Message</h2>
+            <form method="POST" action="#">
+                <label for="contact_name" style="color: #AAA; font-size: 0.9em; display: block; margin-bottom: 5px;">YOUR NAME</label>
+                <input type="text" id="contact_name" name="contact_name" placeholder="Full Name/Company" required>
+
+                <label for="contact_email" style="color: #AAA; font-size: 0.9em; display: block; margin-bottom: 5px;">EMAIL ADDRESS</label>
+                <input type="email" id="contact_email" name="contact_email" placeholder="Your Best Contact Email" required>
+
+                <label for="contact_message" style="color: #AAA; font-size: 0.9em; display: block; margin-bottom: 5px;">YOUR MESSAGE</label>
+                <textarea id="contact_message" name="contact_message" rows="6" placeholder="How can we help you?" required></textarea>
+
+                <button type="submit" class="btn" style="background: var(--color-accent);">SUBMIT INQUIRY &gt;</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="animate-on-load" style="padding-top: 15px;">
+        <h2 style="font-size: 1.5em; margin-bottom: 25px;">Contact Channels</h2>
+
+        <div style="margin-bottom: 30px;">
+            <h3 style="color: var(--color-accent); font-size: 1.2em;">TECHNICAL SUPPORT</h3>
+            <p style="color: #AAA;">support@spoofshield.ai</p>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            <h3 style="color: var(--color-accent); font-size: 1.2em;">SALES & PARTNERSHIPS</h3>
+            <p style="color: #AAA;">sales@spoofshield.ai</p>
+        </div>
+
+        <div style="margin-bottom: 30px;">
+            <h3 style="color: var(--color-accent); font-size: 1.2em;">PRESS INQUIRIES</h3>
+            <p style="color: #AAA;">press@spoofshield.ai</p>
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}

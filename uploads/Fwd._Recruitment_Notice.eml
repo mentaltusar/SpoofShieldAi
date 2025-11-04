@@ -1,0 +1,121 @@
+Delivered-To: tusarkant2005@gmail.com
+Received: by 2002:a05:6638:608b:b0:50d:558a:204 with SMTP id dv11csp1335826jab;
+        Tue, 9 Sep 2025 03:31:12 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHEOa858TmLjsta7MkQIVMTg2TWJtXntJOQmc9WymMht6F9wB7VqUjTDlPkT+Tp3Q2JCYOR
+X-Received: by 2002:a17:906:fd8d:b0:b04:5c5b:16b1 with SMTP id a640c23a62f3a-b04b164f3bamr1007136666b.42.1757413872369;
+        Tue, 09 Sep 2025 03:31:12 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1757413872; cv=none;
+        d=google.com; s=arc-20240605;
+        b=QbH1hocHkowCEfjaU7yGtO8bvblVlTEVOwYGg8YSl8vIMZ1EUUaolA2IMeERcvC8Fy
+         Xz1r6RhsEgq3BVBYXn5R4tvu5UZqRAwlL1LaNtXJcDE/VP5b5b+QYumUm73T+X5Vqq+K
+         OaL2ZPOnN5ix1MFM0h/xrB1G57bFy5e7aliEUGlN26YvlYEyBv9xYYoe7eQso+DAzt/y
+         v4iIF4feRa3EoMRINukcXPoXEoUNnc8fWx6OgpapfZdHZQlGLCOl43G+mpAppPVVhEd7
+         zb5q+z3Jecqay8dI5VaP2D9i9xdxbUa3pyniiD/uP4N9e7kItacTaon6FD2fO6FFZSPt
+         cSjQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=sender:message-id:reply-to:subject:to:from:mime-version
+         :dkim-signature:date;
+        bh=1TEwrgXrFP+K87eJFCvr1ekMWjmpxh4zZC+jjLJkmus=;
+        fh=a2n8/uFnkV/5uvjQmGZVH7HlusXGVyFb0z9R5S0wI4k=;
+        b=aW1509ffy3521sCE0A7svSuC4bH3aCUvXBKTV2bJGMOJsTiOXXy5d4VFo4diGLigHn
+         U11vFvDwp6C2TkM5NByovzNMFJvmU++qvG2JYgedECDbJmcY2JXfLqInvPhlhBm/Uc5E
+         oLwML6T7cxNRDwu/pwJPWjhNJ90xGPZ+GrPHMe05wPn+U8ZqWte0psxCglh/9m+uTCCO
+         jKUoJP5Z3Zp4hrwmGBd1WIUXMkhlyHoNrPlpWGpgz0gH5WRpaF+xjRwECqWTB8LntnXd
+         tksJwPXG0oT51D9lSesB+ZjXi5yLpLp4dopSc8M0R6oSQTLL2E4Ho7j5XFlxBOqVMiTC
+         nH0g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@dr-akbarkhosh.com header.s=default header.b=HSRUbsmM;
+       spf=softfail (google.com: domain of transitioning info@dr-akbarkhosh.com does not designate 89.32.250.171 as permitted sender) smtp.mailfrom=info@dr-akbarkhosh.com;
+       dmarc=fail (p=QUARANTINE sp=QUARANTINE dis=QUARANTINE) header.from=tatasteel.com
+Return-Path: <info@dr-akbarkhosh.com>
+Received: from cp81p.nocmails.info (maildc1526907145.mihandns.com. [89.32.250.171])
+        by mx.google.com with ESMTPS id 4fb4d7f45d1cf-628f29f8dd5si2467726a12.230.2025.09.09.03.31.11
+        for <tusarkant2005@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 09 Sep 2025 03:31:11 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning info@dr-akbarkhosh.com does not designate 89.32.250.171 as permitted sender) client-ip=89.32.250.171;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@dr-akbarkhosh.com header.s=default header.b=HSRUbsmM;
+       spf=softfail (google.com: domain of transitioning info@dr-akbarkhosh.com does not designate 89.32.250.171 as permitted sender) smtp.mailfrom=info@dr-akbarkhosh.com;
+       dmarc=fail (p=QUARANTINE sp=QUARANTINE dis=QUARANTINE) header.from=tatasteel.com
+Date: Tue, 09 Sep 2025 03:31:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=dr-akbarkhosh.com; s=default; h=Sender:Message-ID:Reply-To:Subject:To:From:
+	MIME-Version:Content-Type:Date:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=1TEwrgXrFP+K87eJFCvr1ekMWjmpxh4zZC+jjLJkmus=; b=HSRUbsmMui8cG10vMcI1jgc3Qw
+	SsRqWuUNYS8/hHUsNpreGpZHfUKx2Bit59EYwyy41V4QL7Hjtq9O4QsZzC6bluHhNxHOsf8UqGl0i
+	u+U6ZeYz/88tDFBgw2LvfSLxZqO4DZcH+TkTKI/eZL5EolJZyMJVuH3GA7M41GiO0JP8ekOh/8YEf
+	zrdBYzIIFmKq0VImrUpWcPA7vdFM69NWee5mP0AAXCCzJ74OPB3qz2FwH4UPu67yWlTB5vYZ7vP2R
+	YXySiBWhRAD9mrnXhPQrRNWcBsCLu06xlU5JmI5vYAChtA2lbXF3Xk4J5NYZ2IUG9NP9M68lWiQSk
+	pWOhu1QQ==;
+Received: from [66.23.230.122] (port=50738 helo=[127.0.1.1])
+	by cp81p.nocmails.info with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <info@dr-akbarkhosh.com>)
+	id 1uvvnk-0059za-1X
+	for tusarkant2005@gmail.com;
+	Tue, 09 Sep 2025 14:01:10 +0330
+Content-Type: multipart/mixed; boundary="===============0025023520484142079=="
+MIME-Version: 1.0
+From: TATA <recruitment@tatasteel.com>
+To: tusarkant2005@gmail.com
+Subject: Fwd.:Recruitment Notice
+Reply-To: recruitment@tatasteeL.com
+Message-ID: <68c001eb8a6e8@dr-akbarkhosh.com>
+Sender: info@dr-akbarkhosh.com
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - cp81p.nocmails.info
+X-AntiAbuse: Original Domain - gmail.com
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - dr-akbarkhosh.com
+X-Get-Message-Sender-Via: cp81p.nocmails.info: authenticated_id: info@dr-akbarkhosh.com
+X-Authenticated-Sender: cp81p.nocmails.info: info@dr-akbarkhosh.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+
+--===============0025023520484142079==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+RGVhciBBbmlsIEt1bWFyIE9qaGEsDQoNCldlIGFyZSBwbGVhc2VkIHRvIGluZm9ybSB5b3UgdGhh
+dCB5b3UgaGF2ZSBiZWVuIHByb3Zpc2lvbmFsbHkgc2VsZWN0ZWQgZm9yIGFwcG9pbnRtZW50IHdp
+dGggVGF0YSBTdGVlbCBMdGQuIGZvbGxvd2luZyB5b3VyIGFjaGlldm1lbnQgaW4gdGhlIHNlbGVj
+dGlvbiBwcm9jZXNzLiBZb3VyIHJlcG9ydGluZyBsZXR0ZXIgd2lsbCBiZSBpc3N1ZWQgb24gM3Jk
+IEphbnVhcnkgMjAyNiwgd2hpY2ggd2lsbCBpbmNsdWRlIGRldGFpbHMgcmVnYXJkaW5nIHlvdXIg
+am9pbmluZyBmb3JtYWxpdGllcywgcmVwb3J0aW5nIHZlbnVlLCBhbmQgdGhlIGRvY3VtZW50cyBy
+ZXF1aXJlZCBhdCB0aGUgdGltZSBvZiBqb2luaW5nLiBPbiB0aGUgZGF5IG9mIHJlcG9ydGluZywg
+eW91IHdpbGwgYWxzbyBiZSBpc3N1ZWQgeW91ciBhcHBvaW50bWVudCBsZXR0ZXIsIHdoZXJlIHlv
+dXIgc2FsYXJ5IHN0cnVjdHVyZSwgYWxsb3dhbmNlcywgYW5kIG90aGVyIHNlcnZpY2UgY29uZGl0
+aW9ucyB3aWxsIGJlIGNsZWFybHkgc3BlY2lmaWVkLg0KDQpZb3VyIGluaXRpYWwgcGxhY2Ugb2Yg
+cG9zdGluZyB3aWxsIGJlIGF0IER1YnVyaSwgSmFqcHVyLCBPZGlzaGEuIEJlZm9yZSBiZWluZyBw
+bGFjZWQgdGhlcmUsIHlvdSB3aWxsIHVuZGVyZ28gYSBvbmUteWVhciBzdHJ1Y3R1cmVkIHRyYWlu
+aW5nIHByb2dyYW0gYXQgVGF0YSBTdGVlbOKAmXMgTGVhcm5pbmcgJiBEZXZlbG9wbWVudCBDZW50
+cmUgaW4gSmFtc2hlZHB1ciwgSmhhcmtoYW5kLiBUaGlzIHByb2dyYW0gaXMgZGVzaWduZWQgdG8g
+cHJvdmlkZSB5b3Ugd2l0aCBoYW5kcy1vbiBleHBvc3VyZSB0byBUYXRhIFN0ZWVs4oCZcyBvcGVy
+YXRpb25hbCBwcmFjdGljZXMsIHRlY2huaWNhbCBzeXN0ZW1zLCBhbmQgb3JnYW5pemF0aW9uYWwg
+dmFsdWVzLCBwcmVwYXJpbmcgeW91IHRvIHRha2UgdXAgcmVzcG9uc2liaWxpdGllcyBlZmZlY3Rp
+dmVseSB1cG9uIGNvbXBsZXRpb24uDQoNCkR1cmluZyB5b3VyIHRyYWluaW5nIGFuZCBzdWJzZXF1
+ZW50IGVtcGxveW1lbnQsIHlvdSB3aWxsIGJlIGVudGl0bGVkIHRvIGEgY29tcGV0aXRpdmUgc2Fs
+YXJ5IGFuZCBiZW5lZml0cyBwYWNrYWdlIGFzIHBlciBUYXRhIFN0ZWVs4oCZcyBIUiBwb2xpY2ll
+cy4gRGV0YWlscyBvZiBjb21wZW5zYXRpb24sIG1lZGljYWwgZmFjaWxpdGllcywgcHJvdmlkZW50
+IGZ1bmQsIGxlYXZlIGVudGl0bGVtZW50cywgYW5kIG90aGVyIHBlcmtzIHdpbGwgYmUgbWVudGlv
+bmVkIGluIHlvdXIgYXBwb2ludG1lbnQgbGV0dGVyLiBZb3UgYXJlIHJlcXVpcmVkIHRvIGNhcnJ5
+IGFsbCB5b3VyIG9yaWdpbmFsIGVkdWNhdGlvbmFsIGNlcnRpZmljYXRlcywgaWRlbnRpdHkgYW5k
+IGFkZHJlc3MgcHJvb2ZzLCByZWNlbnQgcGFzc3BvcnQtc2l6ZWQgcGhvdG9ncmFwaHMsIGFuZCBh
+bnkgb3RoZXIgZG9jdW1lbnRzIHNwZWNpZmllZCBpbiB5b3VyIHJlcG9ydGluZyBsZXR0ZXIgZm9y
+IHZlcmlmaWNhdGlvbiBhdCB0aGUgdGltZSBvZiBqb2luaW5nLg0KDQpQbGVhc2Ugbm90ZSB0aGlz
+IGlzIHN1YmplY3QgdG8gdmVyaWZpY2F0aW9uIG9mIHlvdXIgZG9jdW1lbnRzIGFuZCB5b3VyIG1l
+ZGljYWwgZml0bmVzcyBhcyBwZXIgVGF0YSBTdGVlbOKAmXMgc3RhbmRhcmRzLiBBbnkgZGlzY3Jl
+cGFuY3kgaW4gdGhlIGluZm9ybWF0aW9uIHByb3ZpZGVkIGR1cmluZyB0aGUgcmVjcnVpdG1lbnQg
+cHJvY2VzcyBtYXkgcmVzdWx0IGluIHdpdGhkcmF3YWwgb2YgdGhlIHByb3Bvc2FsLg0KDQpXZSB3
+YXJtbHkgd2VsY29tZSB5b3UgdG8gdGhlIFRhdGEgU3RlZWwgZmFtaWx5IGFuZCBsb29rIGZvcndh
+cmQgdG8geW91ciBjb250cmlidXRpb24gdG8gb3VyIGxlZ2FjeSBvZiBleGNlbGxlbmNlIGFuZCBp
+bm5vdmF0aW9uLg0KDQpXaXRoIHJlZ2FyZHMsDQpUYXRhIFN0ZWVsIEx0ZC4=
+
+--===============0025023520484142079==--

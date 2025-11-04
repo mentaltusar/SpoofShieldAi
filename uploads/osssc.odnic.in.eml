@@ -1,0 +1,300 @@
+Delivered-To: tusarkant2005@gmail.com
+Received: by 2002:a05:651c:50f:b0:30d:da32:9e6b with SMTP id o15csp2866019ljp;
+        Wed, 7 May 2025 06:38:15 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IG2ovHYUrMZ8hJWgi8umSc/FtVttRdcs3elSc4AHB/PeShUgBdy1vASjX4+d5WldAZWKZtQ
+X-Received: by 2002:a17:903:2351:b0:220:e023:8fa6 with SMTP id d9443c01a7336-22e5ee1390amr48558045ad.50.1746625095061;
+        Wed, 07 May 2025 06:38:15 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1746625095; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=kAcWzq9Dh4o03k0nfV7Gi98aAfIax0+2DJFmLU2Ys2/UYPuxgCucjZUP6kYsAT5i3Z
+         xHSKkW/rPme/UtMnzC8u9w8tFiL4wsOQlHNxF5QZeh/OFGwd9TmK29E17hzTwLsfu70C
+         ynQrw9WQoSNNJRk0yT8VshZKAsC8Shkl5ACftO6M4+7m9LhDV0nJGjFVNHEy9WCzjylS
+         codIjBzBXERJVNmOypp5MFT/kfgLyjWvwkNgxA5NTwDGaSe7DGmHJzc/QO/tJgFRgTyX
+         QPLukz2wbatIsDSAbdWkM1vnE0qcxGCH89SvuVy2v8TO5LFHY7ahl+uO4jQaUf7aV+Jm
+         DChg==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:signed-by:mailed-by
+         :message-id:subject:reply-to:from:to:date;
+        bh=IioCMtej5idKD3+t2MFvkiGLDo0ii8DZnk4wCsxhb0s=;
+        fh=a2n8/uFnkV/5uvjQmGZVH7HlusXGVyFb0z9R5S0wI4k=;
+        b=G8Hm2TJJ1YvjixOMMBmUnkbvRbvr+PvU943GSiH/cQ6tjXTf0cPXP3igd9TDUiO7DK
+         hg/Gp++H9s5Zjm3EbT2Vd7yVwksf03nh/XHHS5U38zU7nHCAzwGXbcZhn0TvBCrkPS5a
+         lV6netIDeL472LCdmvtqb6qB9q8NLwr4QxX3UCzgOTLHFhqh3CY+hWCfvLSaZnhglfSM
+         QX8DqRNeZC8vlmneZnK1l2PJlds9DcHxccpB97l6XDvfzwW65643GoQZOjdyMSvRhTnq
+         SgEShIE8cLVquooAWJ8DJabEW3eFiLRqYI0GsTI+E/lKIDm6V8/cAE+y+Qdkuh9O9Dtr
+         FUkg==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of supervisor@bestsolutionsoft.com designates 23.83.218.24 as permitted sender) smtp.mailfrom=supervisor@bestsolutionsoft.com
+Return-Path: <supervisor@bestsolutionsoft.com>
+Received: from buffalo.tulip.relay.mailchannels.net (buffalo.tulip.relay.mailchannels.net. [23.83.218.24])
+        by mx.google.com with ESMTPS id d9443c01a7336-22e151efe79si145372265ad.161.2025.05.07.06.38.14
+        for <tusarkant2005@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 07 May 2025 06:38:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of supervisor@bestsolutionsoft.com designates 23.83.218.24 as permitted sender) client-ip=23.83.218.24;
+Authentication-Results: mx.google.com;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of supervisor@bestsolutionsoft.com designates 23.83.218.24 as permitted sender) smtp.mailfrom=supervisor@bestsolutionsoft.com
+X-Sender-Id: a2hosting|x-authuser|supervisor@bestsolutionsoft.com
+Received: from relay.mailchannels.net (localhost [127.0.0.1])
+	by relay.mailchannels.net (Postfix) with ESMTP id 198DA163AF2;
+	Wed,  7 May 2025 13:38:14 +0000 (UTC)
+Received: from az1-sr103.supercp.com (trex-3.trex.outbound.svc.cluster.local [100.116.137.153])
+	(Authenticated sender: a2hosting)
+	by relay.mailchannels.net (Postfix) with ESMTPA id 9FC3F164DDE
+	for <tusarkant2005@gmail.com>; Wed,  7 May 2025 13:38:13 +0000 (UTC)
+ARC-Seal: i=1; s=arc-2022; d=mailchannels.net; t=1746625093; a=rsa-sha256;
+	cv=none;
+	b=NbDl74mNy3/IZiWHJgXxPim+ZuERXvmNy+42Jy0dJFQOzs1HPhEByrmuZ4fZyv3JAPUp+A
+	oYQE2ZVMZaWiZh5JnDlnO5CgqxnW5Foe9FiC3n9BsaYZd2aevoZ5X3IpQ6An08U+RbkpKP
+	hImXyCozjczijNYnleqvbPK9mLN2mOjTe8o7o1CCF7JkPWOKS2vc1Xz26VovCIxNXwzVxH
+	ZlXCd/YNLQooaWfseoDpSp3Se0WHnl+i3kw20M06CNQAE7Jso5/Zk/3yk/R5xPzyxszRLx
+	4/wTMkFL/8YzSgMH9EDHyyutayfPcXgkpitKkd7vcEeHYUZ8LZRF7Ge6N83R2Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mailchannels.net;
+	s=arc-2022; t=1746625093;
+	h=from:from:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding;
+	bh=IioCMtej5idKD3+t2MFvkiGLDo0ii8DZnk4wCsxhb0s=;
+	b=K+Uu/1CQz35ve1nUOAu3XM6RH9YNTMCM1pyxail0oXdcK+BJtGOMarFB6UUXLF4xiFKDjb
+	4JBWawPqXtLLvImm4W0Rylvwdta/LbbHmfPY74AAQu/Di2Z+MZo9X0jH83K389oKFUrVYl
+	gwufRqaXktgi2ONaYOH/iDlGR5UlM/ZK3r5lGBAae1pRTqyP9wzoaEzDjCUx8v/0rkDUWq
+	zuajDs/B+Vc0co2UCJ+ULUkF+rPSI+WS3lWYNvw9NvBqngU38Se00R+D1pTusa3qp537aE
+	kqAtwoUFEfYSedm5ejuCGYsM+2QlWA78mSrgVbo+GBjnA089t0NcnuTtOI9Rvg==
+ARC-Authentication-Results: i=1;
+	rspamd-6954bcdf67-lkmg8;
+	auth=pass smtp.auth=a2hosting smtp.mailfrom=supervisor@bestsolutionsoft.com
+X-Sender-Id: a2hosting|x-authuser|supervisor@bestsolutionsoft.com
+X-MC-Relay: Neutral
+X-MC-Copy: stored-urls
+X-MailChannels-SenderId: a2hosting|x-authuser|supervisor@bestsolutionsoft.com
+X-MailChannels-Auth-Id: a2hosting
+X-Celery-Wide-Eyed: 6d91f54b63ea93c9_1746625093923_1019709216
+X-MC-Loop-Signature: 1746625093923:732238270
+X-MC-Ingress-Time: 1746625093923
+Received: from az1-sr103.supercp.com (az1-sr103.supercp.com [106.0.62.94])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384)
+	by 100.116.137.153 (trex/7.0.3);
+	Wed, 07 May 2025 13:38:13 +0000
+Received: from mailnull by az1-sr103.supercp.com with spam-scanner (Exim 4.98.1)
+	(envelope-from <supervisor@bestsolutionsoft.com>)
+	id 1uCeyS-00000001BAW-3yAJ
+	for tusarkant2005@gmail.com;
+	Wed, 07 May 2025 06:38:12 -0700
+X-ImunifyEmail-Filter-Action: no action
+X-ImunifyEmail-Filter-Info: TUlNRV9IVE1MX09OTFkgUkVQTFlUT19BRERSX0VRX0ZST00g
+	QVNOIEF
+		SQ19OQSBGUk9NX05FUV9ESVNQTEFZX05BTUUgSUVfRk9SR0VEX0ZST0
+		1fRE9NQUlOIEZST01fTkVRX0VOVkZST00gUkNWRF9UTFNfQUxMIEhBU
+		19SRVBMWVRPIFJDUFRfQ09VTlRfT05FIElFX0ZPUkdFRF9TRU5ERVJf
+		RE9NQUlOIEJBWUVTX0hBTSBWRVJJTE9DS19DQiBNSU1FX1RSQUNFIFR
+		PX0ROX05PTkUgUkNWRF9WSUFfU01UUF9BVVRIIFJDVkRfQ09VTlRfT0
+		5FIE1JU1NJTkdfWE1fVUEgRk9SR0VEX1NFTkRFUiBGUk9NX0hBU19ET
+		iBNSU1FX1VOS05PV04gVE9fTUFUQ0hfRU5WUkNQVF9BTEw=
+X-ImunifyEmail-Filter-Score: 0.50
+X-ImunifyEmail-Filter-Version: 3.8.13/202504300959
+Received: from nl10.nlkoddos.com ([185.191.124.15]:43866 helo=spamir.io)
+	by az1-sr103.supercp.com with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.1)
+	(envelope-from <supervisor@bestsolutionsoft.com>)
+	id 1uCeyT-00000001B6j-0Jkr
+	for tusarkant2005@gmail.com;
+	Wed, 07 May 2025 06:38:12 -0700
+Date: Wed, 7 May 2025 09:38:09 -0400
+To: tusarkant2005@gmail.com
+From: "osssc.od@nic.in" <opsc@nic.xn--n-iga>
+Reply-To: opsc@nic.xn--n-iga
+Subject: osssc.od@nic.in
+Message-ID: <681b6241efd53@bestsolutionsoft.com>
+Mailed-by: bestsolutionsoft.com
+Signed-by: bestsolutionsoft.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-AuthUser: supervisor@bestsolutionsoft.com
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joining Letter - PEO Post</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif; /* Changed to a more formal font */
+            color: #333;
+            background-color: #f5f5f5;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e0e0e0' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            margin: -40px -40px 30px -40px;
+            text-align: center;
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
+        }
+
+        .header-img {
+            width: 100%;
+            display: block;
+        }
+
+        h2 {
+            color: #004B87;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .note {
+            background-color: #FFF3CD;
+            border-left: 5px solid #FFDB58;
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 30px 0;
+            font-size: 16px;
+            color: #856404;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .footer a {
+            color: #004B87;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #004B87;
+        }
+
+        .footer img {
+            width: 120px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+            .header {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 20px;
+            }
+            .header {
+                margin: -20px -20px 20px -20px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+            .note {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.Ov8qSUwQa-hAOTlijoDN-wHaCA&pid=Api&P=0&h=220" class="header-img" alt="OSSSC Logo">
+    </div>
+
+    <h2>Dear Manoj Kumar Behera,</h2>
+
+    <p>We are pleased to inform you that you have been <strong>recruited</strong> for the post of <strong>Panchayat Executive Officer (PEO)</strong> under the recent OSSSC recruitment.</p>
+
+    <p>You are hereby instructed to <strong>retrieve the official Joining Letter</strong> in person from our office between <strong>15th May 2025 and 20th May 2025</strong>, during working hours (<strong>10:30 AM to 5:30 PM</strong>), at the address mentioned below:</p>
+
+    <p><strong>Office Address:</strong><br>
+    Odisha Sub-ordinate Staff Selection Commission (OSSSC)<br>
+    Block No. 3 & 5, Unit-V,<br>
+    Bhubaneswar – 751009, Odisha, India.</p>
+
+    <p>Please carry a valid government-issued photo ID and a copy of your registration details at the time of receiving.</p>
+
+    <div class="note">
+        <p><strong>Important Note:</strong><br>
+        Failure to retrieve the joining letter within the specified dates will result in <strong>automatic cancellation</strong> of your selection without any further correspondence.
+        </p>
+    </div>
+
+    <p>For any clarification, you may contact our office during working hours.</p>
+
+    <div class="footer">
+        <p>Regards,<br>
+        <strong>Odisha Sub-ordinate Staff Selection Commission, Odisha</strong><br>
+        Email: <a href="mailto:osssc@odisha.gov.in">osssc@odisha.gov.in</a><br>
+        Phone: +91 123 456 7890</p>
+        
+        <!-- Logo Image -->
+        <img src="https://tse2.mm.bing.net/th?id=OIP.Ov8qSUwQa-hAOTlijoDN-wHaCA&pid=Api&P=0&h=220" alt="OSSSC Logo">
+    </div>
+</div>
+
+</body>
+</html>
+
+
